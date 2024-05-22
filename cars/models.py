@@ -5,11 +5,9 @@ from django.db import models
 class Brand(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200,blank=True,null=True)
-    tipo = models.CharField(max_length=100,blank=True,null=True)  
-    categoria = models.CharField(max_length=100,blank=True,null=True)
+    
     def __str__(self):
-
-        return f"{self.name} - {self.tipo} - {self.categoria}"
+        return self.name
 
 class Car(models.Model):
     id = models.AutoField(primary_key=True)
